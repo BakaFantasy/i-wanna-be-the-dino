@@ -125,6 +125,7 @@ static void DoMenuInput(void) {
 }
 
 void MaintainFPS(void) {
+    // inspired from tutorial on SDL Wiki
 	long interval = (long) (INTERVAL_INT + frac_tick);
 	frac_tick -= (int) frac_tick;
 	long passed = (long) SDL_GetTicks() - next_tick;
